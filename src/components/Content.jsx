@@ -1,34 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from "react";
+import heroImage from "../assets/hero-image.png";
+import Spinner from "react-loading-indicators";
 
 function Content() {
-    const [data, setData] = useState();
+  const [data, setData] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-      // fetch data
-      const dataFetch = async () => {
-        const data = await (
-          await fetch(
-            "https://my-json-server.typicode.com/Federick2104/vg-lgbt-api/db"
-          )
-        ).json();
-  
-        // set state when the data received
-        console.log(data);
-        setData(data);
-      };
-  
-      dataFetch();
-    }, []);
+      setIsLoading(true)
+      fetch("https://my-json-server.typicode.com/Federick2104/personaggi-lgbt-api/vg")
+        .then((resp) => resp.json())
+        .then((apiData) => {
+          setData(apiData)
+        })
+        .finally(() => setIsLoading(false))
+    }, [])
 
+    if (isLoading) {
+      return <div className="flex justify-center"><Spinner style={{ fontSize: "20px" }} color="pink" /></div>;
+    }
+  
   return (
-    <>
-    <h1>Data fetch and showed</h1>
-    <div className='h-screen'>
-      
+    <div className="p-5 grid grid-cols-4 gap-4">
+      {data.map((p) => (
+        <div key={p.id} className="max-w-sm rounded overflow-hidden shadow-lg">
+        <img className="w-full" src={heroImage} alt="lgbt"/>
+        <div className="px-6 py-4">
+          <div className="font-bold text-xl mb-2">{p.name}</div>
+          <p className="text-gray-700 text-base">
+            {p.game}
+          </p>
+        </div>
+        <div className="px-6 pt-4 pb-2">
+          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
+          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
+          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
+        </div>
+      </div>
+      )
+      )}
     </div>
-    </>
-    
-  );
+  )
 }
 
-export default Content;
+export default Content

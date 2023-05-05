@@ -1,12 +1,12 @@
 import React from 'react'
-import heroImage from "../assets/hero-image.png";
-
+import heroImage from "../assets/hero-image.webp";
+import lgbt_relation from "../assets/lgbt_relation.webp";
 const Feature = () => {
   return (
     <section className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto flex flex-wrap">
     <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
-      <img alt="feature" className="object-cover object-center h-full w-full" src={heroImage}/>
+      <img alt="feature" className="object-cover object-center h-full w-full" src={lgbt_relation}/>
     </div>
     <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
       <div className="flex flex-col mb-10 lg:items-start items-center">

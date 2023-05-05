@@ -1,10 +1,10 @@
 import React from "react";
-import heroImage from "../assets/hero-image.png";
+import lgbtImg from "../assets/lgbt.svg";
 
 const Hero = () => {
   return (
-    <>
-    <h1 className="mb-4 mt-[200px] text-4xl font-extrabold text-center tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">We invest in the world’s potential</h1>
+    <div className="h-screen">
+    <h1 className="mb-4 pt-[150px] text-4xl font-extrabold text-center tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">We invest in the world’s potential</h1>
     <section className="text-gray-600 body-font flex justify-center items-center">
     <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
       <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
@@ -18,11 +18,11 @@ const Hero = () => {
         </div>
       </div>
       <div className="lg:max-w-lg lg:w-full md:w-1/2 w-">
-        <img className="object-cover object-center rounded" alt="hero" src={heroImage}/>
+        <img className="object-cover object-center rounded" alt="hero" src={lgbtImg}/>
       </div>
     </div>
   </section>
-</>
+</div>
   )
 };
 

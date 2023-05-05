@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import heroImage from "../assets/hero-image.png";
+import heroImage from "../assets/hero-image.webp";
 import Spinner from "react-loading-indicators";
 
 function Content() {
@@ -21,10 +21,10 @@ function Content() {
     }
   
   return (
-    <div className="p-5 grid grid-cols-4 gap-4">
+    <div className="p-10 grid grid-cols-4 gap-4">
       {data.map((p) => (
         <div key={p.id} className="max-w-sm rounded overflow-hidden shadow-lg">
-        <img className="w-full" src={heroImage} alt="lgbt"/>
+        <img className="w-full" src={p.image} alt="lgbt"/>
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{p.name}</div>
           <p className="text-gray-700 text-base">

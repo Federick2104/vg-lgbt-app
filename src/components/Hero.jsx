@@ -4,7 +4,7 @@ import heroImage from "../assets/hero-image.png";
 const Hero = () => {
   return (
     <>
-    <h1 class="mb-4 mt-[200px] text-4xl font-extrabold text-center tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">We invest in the world’s potential</h1>
+    <h1 className="mb-4 mt-[200px] text-4xl font-extrabold text-center tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">We invest in the world’s potential</h1>
     <section className="text-gray-600 body-font flex justify-center items-center">
     <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
       <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">

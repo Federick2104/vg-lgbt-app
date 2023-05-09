@@ -13,8 +13,8 @@ const Hero = () => {
         </h1>
         <p className="mb-8 leading-relaxed">Video games have the power to reach a wide audience, and by including LGBT characters and storylines, game developers can help break down stereotypes and promote understanding and acceptance.</p>
         <div className="flex justify-center">
-          <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Explore</button>
-          <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Our API</button>
+          <a href={'https://schianchi-federico.notion.site/API-VIDEOGAMES-LGBT-ac61e73ba20f4bc8b830d56f131f39dd'} target="_blank" className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Explore</a>
+          <a href={'https://schianchi-federico.notion.site/API-VIDEOGAMES-LGBT-ac61e73ba20f4bc8b830d56f131f39dd'} target="_blank" className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Our API</a>
         </div>
       </div>
       <div className="lg:max-w-lg lg:w-full md:w-1/2 w-">

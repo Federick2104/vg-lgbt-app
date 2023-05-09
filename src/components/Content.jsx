@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Spinner from "react-loading-indicators";
+import lgbt_relation from "../assets/lgbt_relation.webp";
+
 
 function Content() {
   const [data, setData] = useState([])
@@ -26,6 +28,11 @@ function Content() {
       setSearchInput(e.target.value);
     };
     
+    function ImgError (e){
+      e.target.src = lgbt_relation
+    }
+    
+
    let filteredData = searchInput ? stableData.filter((p) => p.name.toLowerCase().includes(searchInput.toLowerCase())) : stableData;
     
   return (
@@ -39,10 +46,10 @@ function Content() {
             <input type="search" onChange={handleChange} value={searchInput} id="default-search" className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-[#4F45E4] focus:border-[#4F45E4] dark:bg-[#ebebec] dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-[#4F45E4] dark:focus:border-[#4F45E4]" placeholder="Search champion, characters name..." required/>
         </div>
     </form>
-     <div className="p-10 grid grid-cols-4 gap-4 min-h-full">
+     <div className="p-10 grid grid-cols-4 gap-4 min-h-full grid-flow-row">
       {filteredData.map((p) => (
         <div key={p.id} className="max-w-sm rounded overflow-hidden shadow-lg">
-        <img className="w-full" src={p.image} alt="lgbt"/>
+        <img className="w-full" src={p.image} alt="lgbt" onError={ImgError}/>
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{p.name}</div>
           <p className="text-gray-700 text-base">

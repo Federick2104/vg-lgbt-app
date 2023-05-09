@@ -1,5 +1,4 @@
 import React from 'react'
-import heroImage from "../assets/hero-image.webp";
 import lgbt_relation from "../assets/lgbt_relation.webp";
 const Feature = () => {
   return (

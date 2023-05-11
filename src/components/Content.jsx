@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Spinner from "react-loading-indicators";
 import lgbt_relation from "../assets/lgbt_relation.webp";
-
+import Spinner from 'react-loading-indicator';
 
 function Content() {
   const [data, setData] = useState([])

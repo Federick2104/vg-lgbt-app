@@ -9,7 +9,7 @@ function Content() {
 
     useEffect(() => {
       setIsLoading(true)
-      fetch("https://my-json-server.typicode.com/Federick2104/personaggi-lgbt-api/vg")
+      fetch("https://my-json-server.typicode.com/Federick2104/vg-api/vg")
         .then((resp) => resp.json())
         .then((apiData) => {
           setData(apiData)

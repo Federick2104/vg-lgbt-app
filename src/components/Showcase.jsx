@@ -13,8 +13,7 @@ import { EffectCoverflow, Pagination } from "swiper";
 
 const Showcase = () => {
   return (
-    <div className="h-[screen] mb-5">
-    <h1 className="mt-0 pt-[150px] text-4xl font-extrabold text-center tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl "></h1>
+    <div className="h-screen mb-5">
     <Swiper
       effect={"coverflow"}
       grabCursor={true}

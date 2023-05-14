@@ -4,7 +4,7 @@ import Feature from './components/Feature'
 import Footer from './components/Footer'
 import Content from './components/Content'
 import Showcase from './components/Showcase'
-
+import ExternalAPI from './components/ExternalAPI'
 function App() {
   return (
     <>
@@ -12,6 +12,7 @@ function App() {
     <Feature/>
     <Showcase/>
     <Content/>
+    <ExternalAPI/>
     <Footer/>
     </>
   )

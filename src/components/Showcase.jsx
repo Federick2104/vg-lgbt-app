@@ -1,19 +1,18 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React, { useEffect, useState } from "react";
+import { EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import lgbt_relation from "../assets/lgbt_relation.webp";
+import ApiCard from "./ApiCard";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
-
-// import required modules
-import { EffectCoverflow, Pagination } from "swiper";
+import { listaAPI } from '../costanti/constant'
 
 const Showcase = () => {
   return (
-    <div className="h-screen mb-5">
+    <div className="mb-5">
+    <h1 className="mb-10 text-4xl font-extrabold text-center tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">Other LGBTQIA+ themed APIs</h1>
     <Swiper
       effect={"coverflow"}
       grabCursor={true}
@@ -26,86 +25,15 @@ const Showcase = () => {
         modifier: 1,
         slideShadows: true,
       }}
-      pagination={true}
+      pagination={false}
       modules={[EffectCoverflow, Pagination]}
       className="mySwiper"
     >
-      <SwiperSlide>
-      <div className="mx-auto max-w-sm rounded overflow-hidden shadow-lg">
-        <img className="w-full" src={lgbt_relation} alt="lgbt"/>
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">Nome</div>
-          <p className="text-gray-700 text-base">
-            Gioco
-          </p>
-          <p className="text-gray-700 text-base">
-            Gay
-          </p>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
-        </div>
-      </div>
-      </SwiperSlide>
-      <SwiperSlide>
-      <div  className="mx-auto max-w-sm rounded overflow-hidden shadow-lg">
-        <img className="w-full" src={lgbt_relation} alt="lgbt"/>
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">Nome</div>
-          <p className="text-gray-700 text-base">
-            Gioco
-          </p>
-          <p className="text-gray-700 text-base">
-            Gay
-          </p>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
-        </div>
-      </div>
-      </SwiperSlide>
-      <SwiperSlide>
-      <div className="mx-auto max-w-sm rounded overflow-hidden shadow-lg">
-        <img className="w-full" src={lgbt_relation} alt="lgbt"/>
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">Nome</div>
-          <p className="text-gray-700 text-base">
-            Gioco
-          </p>
-          <p className="text-gray-700 text-base">
-            Gay
-          </p>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
-        </div>
-      </div>
-      </SwiperSlide>
-      <SwiperSlide>
-      <div className="mx-auto max-w-sm rounded overflow-hidden shadow-lg">
-        <img className="w-full" src={lgbt_relation} alt="lgbt"/>
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">Nome</div>
-          <p className="text-gray-700 text-base">
-            Gioco
-          </p>
-          <p className="text-gray-700 text-base">
-            Gay
-          </p>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#gay</span>
-        </div>
-      </div>
-      </SwiperSlide>
+      {listaAPI.map((api) => (
+        <SwiperSlide key={api.id} className="px-[6rem]">
+          <ApiCard title={api.title} desc={api.desc} img={api.img} url={api.link}/>
+        </SwiperSlide>
+      ))}
     </Swiper>
   </div>
   )

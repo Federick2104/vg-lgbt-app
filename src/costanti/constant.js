@@ -28,4 +28,22 @@ const listaAPI = [
         link: '#'
     }
 ]
-export {listaAPI};
+
+const testoFeature = [
+    {
+      id: 0,
+      title: "Our API 🏳️‍🌈",
+      text: "Sia che siate sviluppatori di giochi in cerca di personaggi inclusivi da integrare nelle vostre opere, o appassionati desiderosi di esplorare nuove prospettive, la nostra API vi fornisce un vasto assortimento di personaggi,che abbracciano la diversità sessuale e di genere.",
+    },
+    {
+      id: 1,
+      title: "Videogame Industry 🎮",
+      text: "L'industria videoludica sta sempre più abbracciando l'inclusione e la rappresentazione dei personaggi LGBT. Le aziende sviluppatrici stanno offrendo personaggi diversi e storie autentiche, cercando di riflettere la diversità del mondo reale.",
+    },
+    {
+      id: 2,
+      title: "Our goal 🏁",
+      text: "Il nostro obiettivo con questa API è fornire un accesso semplice e completo a una vasta gamma di personaggi LGBT nei videogiochi, promuovendo l'inclusione e la rappresentazione autentica.",
+    }
+  ]
+export {listaAPI, testoFeature};

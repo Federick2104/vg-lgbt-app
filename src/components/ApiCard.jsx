@@ -13,7 +13,7 @@ const ApiCard = ( { title, desc, img, url }) => {
         <p className="mb-8 leading-relaxed">{desc}</p>
         <div className="flex justify-center">
           <a href={url} target="_blank" className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Link to Api</a>
-          <a href={url} target="_blank" className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Copy url</a>
+          <a href={url} target="_blank" className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Explore</a>
         </div>
       </div>
       <div className="lg:max-w-lg lg:w-full md:w-1/2 w-">
